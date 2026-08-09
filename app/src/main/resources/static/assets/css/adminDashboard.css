@@ -21,7 +21,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    background-image: url('../images/clinic-bg.jpg');
+    background-image: url('../images/defineRole/index.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
