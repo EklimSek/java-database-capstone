@@ -182,11 +182,13 @@ for testing.
 
 ## Known Limitations / Roadmap
 
-- **`application.properties` currently has a hardcoded DB password and JWT
-  secret committed to the repo.** This is fine for local coursework use but is
-  a real security issue for any public or production deployment — these should
-  be moved to environment variables (Spring supports `${VAR_NAME}` placeholders
-  in properties files) before deploying this anywhere publicly accessible.
+- **`application.properties` contains hardcoded local dev credentials** (a
+  local MySQL password and JWT secret). This was used for coursework
+  scope, where the database only ever ran locally during development. In a
+  real production deployment, these would be moved to environment variables
+  (Spring supports `${VAR_NAME}` placeholders in properties files) and never
+  committed to version control — the committed `.env`/properties approach used
+  here is coursework-only practice, not a production pattern.
 - No automated test suite beyond the default Spring Boot test scaffold.
 - No Docker Compose file yet to spin up the app alongside MySQL/MongoDB in one
   command — currently requires both databases to be set up separately.
